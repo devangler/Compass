@@ -30,3 +30,18 @@ This app is designed for learning purposes and demonstrates sensor usage and bas
 Feel free to contribute, provide feedback, or use this app as a starting point for your own projects!
 
 Please customize the description according to your repository's structure and any additional features or information you'd like to include.
+
+Contributing
+
+We welcome feedback, translations, and code contributions!❤️
+
+
+Performance
+
+Smouth and quality Performance
+
+Donation
+
+If this project help you reduce time to develop, you can give me a cup of coffee :)😉
+
+
