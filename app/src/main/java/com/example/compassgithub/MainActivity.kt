@@ -26,22 +26,19 @@ class MainActivity : ComponentActivity(), SensorEventListener {
 
     override fun onResume() {
         super.onResume()
-
-        mSensorManager.registerListener(
-            this,
-            mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
-            SensorManager.SENSOR_DELAY_GAME
-        )
+        startCompass()
     }
 
     override fun onPause() {
         super.onPause()
-
         mSensorManager.unregisterListener(this)
     }
 
     override fun onSensorChanged(event: SensorEvent) {
+        calculation(event)
+    }
 
+    private fun calculation(event: SensorEvent) {
         val degree = event.values[0].toInt().toFloat()
         val ra = RotateAnimation(
             currentDegree,
@@ -50,12 +47,18 @@ class MainActivity : ComponentActivity(), SensorEventListener {
             Animation.RELATIVE_TO_SELF,
             0.5f
         )
-
         ra.duration = 210
         ra.fillAfter = true
         image.startAnimation(ra)
         currentDegree = -degree
+    }
 
+    private fun startCompass() {
+        mSensorManager.registerListener(
+            this,
+            mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+            SensorManager.SENSOR_DELAY_GAME
+        )
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
