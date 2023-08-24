@@ -1,4 +1,4 @@
-<b> Compass App</b>
+<b> Compass App 💖</b>
 
 This is a simple compass app for Android built using Kotlin. The app utilizes the device's accelerometer and magnetometer sensors to calculate the orientation and display it as a rotating compass needle on the screen.
 
